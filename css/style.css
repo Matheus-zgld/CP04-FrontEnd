@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=TASA+Explorer:wght@400..800&display=swap');
+:root{
+    --cor-primaria: #39813b;
+    --cor-secundaria: #1f3f14;
+    --cor-fundo: #f5f5f5;
+    --cor-texto: #333333;
+}
+
+header{
+    width: 100%;
+    height: 4vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--cor-fundo);
+    font-size: 1.3vw;
+    font-family: "TASA Explorer", sans-serif;
+    font-optical-sizing: auto;
+    align-items: center;
+    padding: 0vw 3vw;
+}
+
+header img{
+    height: 80%;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    gap: 3vw;
+    font-weight: 400;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: var(--cor-texto);
+}
+
+a:hover{
+    color: var(--cor-primaria);
+}
+
+#carrinho{
+    cursor: pointer;
+    color: var(--cor-texto);
+}
+
+#carrinho:hover{
+    color: var(--cor-primaria);
+}
+
+#subcategorias{
+    display: none;
+    position: absolute;
+    background-color: var(--cor-fundo);
+    list-style: none;
+    padding: 1vw;
+    border: 2px solid var(--cor-primaria);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5vw;
+    margin-top: 1vw;
+}
+
+#subacategorias li:hover{
+    background-color: var(--cor-primaria);
+    color: white;
+    cursor: pointer;
+}
+
+#categorias:focus-within #subcategorias {
+    display: block;
+}
+
+#subcategorias li{
+    padding: 0.5vw 1vw;
+}
+
+.carousel-inner img{
+    height: 40vw;
+    object-fit: cover;
+    filter: brightness(35%);
+}
+
+.carousel-item h5, .carousel-item p{
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.carousel-item h5{
+    font-size: 3vw;
+    font-weight: 700;
+}
+
+.carousel-item p{
+    font-size: 1.5vw;
+    font-weight: 100;
+    max-width: 80%;
+}
+
+.carousel-item button{
+    margin-top: 1vw;
+    padding: 0.8vw 2vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: white;
+    background-color: var(--cor-primaria);
+    border: none;
+    border-radius: 0.9vw;
+    cursor: pointer;
+}
+
+.carousel-item button:hover{
+    background-color: var(--cor-secundaria);
+    transform: scale(1.05);
+}
+
+.ctg1{
+    grid-area: ctg1;
+}
+.ctg2{
+    grid-area: ctg2;
+}
+.ctg3{
+    grid-area: ctg3;
+}
+.ctg4{
+    grid-area: ctg4;
+}
+
+.secao-categorias{
+    display: grid;
+    width: 100%;
+    background-color: var(--cor-primaria);
+    gap: 19px;
+    padding: 2vw 0;
+    align-items:center;
+    justify-content:center;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "ctg1 ctg2 ctg3 ctg4";
+}
+
+.card{
+    width: 20vw;
+    height: auto;
+}
+
+.card img{
+    height: 15vw;
+    object-fit: cover;
+}
+
+.btn{
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    border-radius: 0.5vw;
+    padding: 0.5vw 1vw;
+    font-size: 1vw;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    background-color: var(--cor-secundaria);
+    color: white;
+    transform: scale(1.05);
+}
+
+h2{
+    font-family: "TASA Explorer", sans-serif;
+    font-weight: 500;
+    font-size: 2vw;
+    text-align: center;
+    padding-top: 5vw;
+    padding-bottom: 1vw;
+    color: var(--cor-fundo);
+    background-color: var(--cor-primaria);
+    margin-bottom: 0;
+}
+
+#produtos-title{
+    color: var(--cor-primaria);
+    background-color: var(--cor-fundo);
+}
+
+button{
+    transition: all 0.3s ease;
+}
+
+#produtos-section{
+    background-color: var(--cor-fundo);
+}
+
+#produtos-section .card{
+    color: white;
+    background-color: var(--cor-primaria)
+}
+
+#produtos-section .card img{
+    height: 30vw;
+}
+
+#produtos-section .btn, .btn-group .btn{
+    color: var(--cor-primaria);
+    background-color: var(--cor-fundo);
+    font-weight: 600;
+}
+
+#produtos-section .btn:hover{
+    background-color: var(--cor-secundaria);
+    color: white;
+}
+
+.btn-group .btn{
+    border: 1px solid var(--cor-primaria)
+}
+
+.btn-group .btn:hover{
+    color: var(--cor-fundo);
+    background-color: var(--cor-primaria);
+    border: 1px solid var(--cor-primaria)
+}
+
+.btn-group{
+    width: 100%;
+    padding: 0vw 15vw;
+}
+
+.btn-check:checked+.btn{
+    color: var(--cor-fundo);
+    background-color: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+}
+
+.roupa1{
+    grid-area: roupa1;
+}
+.roupa2{
+    grid-area: roupa2;
+}
+.roupa3{
+    grid-area: roupa3;
+}
+.roupa4{
+    grid-area: roupa4;
+}
+.btn-group{
+    grid-area: btns;
+}
+
+.secao-produtos{
+    display: grid;
+    width: 100%;
+    gap: 19px;
+    padding: 2vw 0;
+    align-items:center;
+    justify-content:center;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "roupa1 roupa2 roupa3 roupa4";
+}
+
+@media screen and (max-width: 1050px){
+    .secao-produtos{
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+        "roupa1 roupa2"
+        "roupa3 roupa4";
+    }
+        .secao-categorias{
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+        "ctg1 ctg2"
+        "ctg3 ctg4";
+    }
+    .card{
+        width:40vw;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .secao-produtos{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+        "roupa1"
+        "roupa2"
+        "roupa3"
+        "roupa4";
+    }
+        .secao-categorias{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+        "ctg1"
+        "ctg2"
+        "ctg3"
+        "ctg4";
+    }
+    .card{
+        width:80vw;
+    }
+    .card img{
+        height: 35vw;
+    }
+}
