@@ -181,7 +181,7 @@ h2{
     margin-bottom: 0;
 }
 
-#produtos-title{
+.white-title{
     color: var(--cor-primaria);
     background-color: var(--cor-fundo);
 }
@@ -227,6 +227,7 @@ button{
 .btn-group{
     width: 100%;
     padding: 0vw 15vw;
+    background-color: var(--cor-fundo);
 }
 
 .btn-check:checked+.btn{
@@ -247,8 +248,44 @@ button{
 .roupa4{
     grid-area: roupa4;
 }
-.btn-group{
-    grid-area: btns;
+
+.beleza1{
+    grid-area: beleza1;
+}
+.beleza2{
+    grid-area: beleza2;
+}
+.beleza3{
+    grid-area: beleza3;
+}
+.beleza4{
+    grid-area: beleza4;
+}
+
+.casa1{
+    grid-area: casa1;
+}
+.casa2{
+    grid-area: casa2;
+}
+.casa3{
+    grid-area: casa3;
+}
+.casa4{
+    grid-area: casa4;
+}
+
+.tecnologia1{
+    grid-area: tecnologia1;
+}
+.tecnologia2{
+    grid-area: tecnologia2;
+}
+.tecnologia3{
+    grid-area: tecnologia3;
+}
+.tecnologia4{
+    grid-area: tecnologia4;
 }
 
 .secao-produtos{
@@ -264,20 +301,130 @@ button{
         "roupa1 roupa2 roupa3 roupa4";
 }
 
+.btn-group:has(#btnradio1:checked) + .secao-produtos .blz,
+.btn-group:has(#btnradio1:checked) + .secao-produtos .cs,
+.btn-group:has(#btnradio1:checked) + .secao-produtos .tec{
+    display: none;
+}
+.btn-group:has(#btnradio1:checked) + .secao-produtos{
+    grid-template-areas: 
+        "roupa1 roupa2 roupa3 roupa4";
+}
+
+.btn-group:has(#btnradio2:checked) + .secao-produtos .rp,
+.btn-group:has(#btnradio2:checked) + .secao-produtos .cs,
+.btn-group:has(#btnradio2:checked) + .secao-produtos .tec{
+    display: none;
+}
+.btn-group:has(#btnradio2:checked) + .secao-produtos{
+    grid-template-areas: 
+        "beleza1 beleza2 beleza3 beleza4";
+}
+
+.btn-group:has(#btnradio3:checked) + .secao-produtos .rp,
+.btn-group:has(#btnradio3:checked) + .secao-produtos .blz,
+.btn-group:has(#btnradio3:checked) + .secao-produtos .tec{
+    display: none;
+}
+.btn-group:has(#btnradio3:checked) + .secao-produtos{
+    grid-template-areas: 
+        "casa1 casa2 casa3 casa4";
+}
+
+.btn-group:has(#btnradio4:checked) + .secao-produtos .rp,
+.btn-group:has(#btnradio4:checked) + .secao-produtos .blz,
+.btn-group:has(#btnradio4:checked) + .secao-produtos .cs{
+    display: none;
+}
+.btn-group:has(#btnradio4:checked) + .secao-produtos{
+    grid-template-areas: 
+        "tecnologia1 tecnologia2 tecnologia3 tecnologia4";
+}
+
+.secao-promocoes{
+    display: grid;
+    width: 100%;
+    gap: 19px;
+    background-color: var(--cor-fundo);
+    padding: 2vw 0;
+    align-items:center;
+    justify-content:center;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "cupom1 cupom2 cupom3 cupom4";
+}
+
+.secao-promocoes .card{
+    height: 12vw;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+footer {
+    background: var(--cor-primaria);
+    color: var(--cor-fundo);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+footer {
+    background: var(--cor-primaria);
+    color: var(--cor-fundo);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 20px;
+}
+
+footer div {
+    flex: 1 1 200px;
+}
+
+footer h3, footer h4 {
+    margin-bottom: 10px;
+    color: var(--cor-secundaria);
+}
+
+footer p, footer ul {
+    margin: 5px 0;
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+}
+
+footer a {
+    color: var(--cor-fundo);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--cor-secundaria);
+}
+
+
 @media screen and (max-width: 1050px){
     .secao-produtos{
         grid-template-columns: auto auto;
         grid-template-rows: auto auto;
         grid-template-areas:
-        "roupa1 roupa2"
-        "roupa3 roupa4";
+            "roupa1 roupa2"
+            "roupa3 roupa4";
     }
-        .secao-categorias{
+    .secao-categorias{
         grid-template-columns: auto auto;
         grid-template-rows: auto auto;
         grid-template-areas:
-        "ctg1 ctg2"
-        "ctg3 ctg4";
+            "ctg1 ctg2"
+            "ctg3 ctg4";
     }
     .card{
         width:40vw;
@@ -294,7 +441,7 @@ button{
         "roupa3"
         "roupa4";
     }
-        .secao-categorias{
+    .secao-categorias{
         grid-template-columns: auto;
         grid-template-rows: auto auto auto auto;
         grid-template-areas:
