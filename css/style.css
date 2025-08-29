@@ -371,18 +371,11 @@ button{
 footer {
     background: var(--cor-primaria);
     color: var(--cor-fundo);
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
-}
-
-footer {
-    background: var(--cor-primaria);
-    color: var(--cor-fundo);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 30px 20px;
+    text-align: center;
 }
 
 footer div {
@@ -410,6 +403,24 @@ footer a:hover {
     color: var(--cor-secundaria);
 }
 
+#menu-mobile{
+    display: none;
+    cursor: pointer;
+    color: var(--cor-texto);
+}
+
+#menu-mobile:hover{
+    color: var(--cor-secundaria);
+}
+
+#menu-lista-mobile{
+    display: none;
+}
+
+#menu-toggle {
+    display: none;
+}
+
 
 @media screen and (max-width: 1050px){
     .secao-produtos{
@@ -432,15 +443,6 @@ footer a:hover {
 }
 
 @media screen and (max-width: 500px){
-    .secao-produtos{
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto auto;
-        grid-template-areas:
-        "roupa1"
-        "roupa2"
-        "roupa3"
-        "roupa4";
-    }
     .secao-categorias{
         grid-template-columns: auto;
         grid-template-rows: auto auto auto auto;
@@ -455,5 +457,135 @@ footer a:hover {
     }
     .card img{
         height: 35vw;
+    }
+    .btn{
+        font-size: 5vw;
+        padding: 3vw;
+    }
+    h2{
+        font-size: 7vw;
+        padding: 5vw 0 1vw 0;
+    }
+    header{
+        height: 15vw;
+        font-size: 4vw;
+    }
+    header ul{
+        display: none;
+    }
+    #carrinho{
+        display: none;
+    }
+    #menu-mobile{
+        display: block;
+    }
+    .carousel-inner img{
+        height: 120vw;
+    }
+    .carousel-item h5{
+        font-size: 10vw;
+    }
+    .carousel-item p{
+        display: none;
+    }
+    .carousel-item button{
+        font-size: 5vw;
+    }
+    label.btn.btn-outline-primary {
+        font-size: 0;
+    }
+    label.btn.btn-outline-primary svg {
+        width: 10vw;
+        height: 10vw;
+    }
+    .btn-group{
+        padding: 0vw 5vw;
+    }
+    .secao-produtos{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+    }
+    .btn-group:has(#btnradio1:checked) + .secao-produtos{
+        grid-template-areas:
+            "roupa1"
+            "roupa2"
+            "roupa3"
+            "roupa4";
+    }
+    .btn-group:has(#btnradio2:checked) + .secao-produtos{
+        grid-template-areas:
+            "beleza1"
+            "beleza2"
+            "beleza3"
+            "beleza4";
+    }
+    .btn-group:has(#btnradio3:checked) + .secao-produtos{
+        grid-template-areas:
+            "casa1"
+            "casa2"
+            "casa3"
+            "casa4";
+    }
+    .btn-group:has(#btnradio4:checked) + .secao-produtos{
+        grid-template-areas:
+            "tecnologia1"
+            "tecnologia2"
+            "tecnologia3"
+            "tecnologia4";
+    }
+    #produtos-section .card img{
+        height: 70vw;
+    }
+    .secao-promocoes .card{
+        height: 80vw;
+    }
+    .secao-promocoes{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            "cupom1"
+            "cupom2"
+            "cupom3"
+            "cupom4";
+    }
+
+    #menu-toggle:checked ~ #menu-lista-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--cor-secundaria);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 5vw 2vw;
+        top: 0vw;
+        left: 50vw;
+        position: fixed;
+        width: 50vw;
+        height: 100vh;
+        z-index: 1000;
+    }
+    #menu-lista-mobile h1 {
+        color: var(--cor-fundo);
+        font-size: 6vw;
+    }
+    #menu-lista-mobile p, #menu-lista-mobile a p {
+        color: var(--cor-fundo);
+        font-size: 4vw;
+        margin: 3vw 0;
+        border: 1px solid var(--cor-fundo);
+        padding: 2vw;
+        width: 80%;
+        border-radius: 2vw;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+    }
+    #menu-lista-mobile label p {
+        width: auto;
+        padding: 3vw 6vw;
+        text-align: center;
+        border-radius: 1000vw;
+    }
+    #menu-lista-mobile p:hover {
+        background-color: var(--cor-primaria);   
     }
 }
