@@ -6,6 +6,14 @@
     --cor-texto: #333333;
 }
 
+#menu-lista-mobile a{
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    border-radius: 1000vw;
+    margin-left: 9vw;
+}
+
 header{
     width: 100%;
     height: 4vw;
@@ -647,7 +655,7 @@ footer a:hover {
         color: var(--cor-fundo);
         font-size: 6vw;
     }
-    #menu-lista-mobile p, #menu-lista-mobile a p {
+    #menu-lista-mobile p {
         color: var(--cor-fundo);
         font-size: 4vw;
         margin: 3vw 0;

@@ -13,6 +13,13 @@
     --text-light: #6c7a6c;
 }
 
+#menu-lista-mobile a{
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    border-radius: 1000vw;
+    margin-left: 9vw;
+}
 
 body {
     background-color: var(--cor-fundo);
@@ -379,7 +386,6 @@ a:hover{
 }
 
 
-/* Footer */
 footer {
     background: var(--cor-primaria);
     color: var(--cor-fundo);
