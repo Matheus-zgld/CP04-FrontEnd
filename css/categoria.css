@@ -13,31 +13,81 @@
     --text-light: #6c7a6c;
 }
 
-* {
-    font-family: 'Poppins', sans-serif;
-}
 
 body {
     background-color: var(--cor-fundo);
     color: var(--text-dark);
+    font-family: 'Poppins', sans-serif;
 }
 
-.navbar {
-    box-shadow: 0 2px 30px var(--light-green);
-    padding: 1rem 0;
+header{
+    width: 100%;
+    height: 4vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--cor-fundo);
+    font-size: 1.3vw;
+    font-family: "TASA Explorer", sans-serif;
+    font-optical-sizing: auto;
+    align-items: center;
+    padding: 0vw 3vw;
+    box-shadow: 0 1px 20px var(--cor-primaria);
 }
 
-.navbar-brand {
-    font-weight: 700;
-    font-size: 1.5rem;
+header img{
+    height: 80%;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    gap: 3vw;
+    font-weight: 400;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: var(--cor-texto);
+}
+
+a:hover{
     color: var(--cor-primaria);
 }
 
-.navbar-nav .nav-link {
-    font-weight: 500;
-    margin: 0 0.5rem;
-    border-radius: 20px;
-    transition: all 0.3s ease;
+#carrinho{
+    cursor: pointer;
+    color: var(--cor-texto);
+}
+
+#carrinho:hover{
+    color: var(--cor-primaria);
+}
+
+#subcategorias{
+    display: none;
+    position: absolute;
+    background-color: var(--cor-fundo);
+    list-style: none;
+    padding: 1vw;
+    border: 2px solid var(--cor-primaria);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5vw;
+    margin-top: 1vw;
+}
+
+#subacategorias li:hover{
+    background-color: var(--cor-primaria);
+    color: white;
+    cursor: pointer;
+}
+
+#categorias:focus-within #subcategorias {
+    display: block;
+}
+
+#subcategorias li{
+    padding: 0.5vw 1vw;
 }
 
 .btn-outline-dark {
@@ -299,6 +349,36 @@ body {
     box-shadow: 0 0 0 0.2rem rgba(74, 124, 89, 0.15);
 }
 
+
+/* Pagination */
+/* Página 1 visível quando btnradio1 está checado */
+.products-section:has(#btnradio1:checked) .page1 {
+    display: flex; 
+}
+.products-section:has(#btnradio1:checked) .page2,
+.products-section:has(#btnradio1:checked) .page3 {
+    display: none;
+}
+
+/* Página 2 visível quando btnradio2 está checado */
+.products-section:has(#btnradio2:checked) .page1,
+.products-section:has(#btnradio2:checked) .page3 {
+    display: none;
+}
+.products-section:has(#btnradio2:checked) .page2 {
+    display: flex;
+}
+
+/* Página 3 (se houver) */
+.products-section:has(#btnradio3:checked) .page1,
+.products-section:has(#btnradio3:checked) .page2 {
+    display: none;
+}
+.products-section:has(#btnradio3:checked) .page3 {
+    display: flex;
+}
+
+
 /* Footer */
 footer {
     background: var(--cor-primaria);
@@ -333,4 +413,79 @@ footer a {
 
 footer a:hover {
     color: var(--cor-secundaria);
+}
+
+#menu-mobile{
+    display: none;
+    cursor: pointer;
+    color: var(--cor-texto);
+}
+
+#menu-mobile:hover{
+    color: var(--cor-secundaria);
+}
+
+#menu-lista-mobile{
+    display: none;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 500px){
+    header{
+        height: 15vw;
+        font-size: 4vw;
+    }
+    header ul{
+        display: none;
+    }
+    #carrinho{
+        display: none;
+    }
+    #menu-mobile{
+        display: block;
+    }
+    
+
+    #menu-toggle:checked ~ #menu-lista-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--cor-secundaria);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 5vw 2vw;
+        top: 0vw;
+        left: 50vw;
+        position: fixed;
+        width: 50vw;
+        height: 100vh;
+        z-index: 1000;
+    }
+    #menu-lista-mobile h1 {
+        color: var(--cor-fundo);
+        font-size: 6vw;
+    }
+    #menu-lista-mobile p, #menu-lista-mobile a p {
+        color: var(--cor-fundo);
+        font-size: 4vw;
+        margin: 3vw 0;
+        border: 1px solid var(--cor-fundo);
+        padding: 2vw;
+        width: 80%;
+        border-radius: 2vw;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+    }
+    #menu-lista-mobile label p {
+        width: auto;
+        padding: 3vw 6vw;
+        text-align: center;
+        border-radius: 1000vw;
+    }
+    #menu-lista-mobile p:hover {
+        background-color: var(--cor-primaria);   
+    }
 }
