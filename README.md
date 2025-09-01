@@ -1,3 +1,20 @@
+## 👥 Integrantes
+
+| Nome            | RM       |
+|-----------------|----------|
+| André Mateus Yoshimori | RM563310 |
+| Eduardo Francisco Mauro Gonçalves | RM561969 |
+| Ever Callisaya Amaru | RM563971 |
+| Gabriel Luchetta dos Santos | RM561861 |
+| Matheus Henrique Ferreirra Camargo da Silva | RM566232 |
+
+
+---
+
+## 🔗 Deploy (GitHub Pages): [https://matheus-zgld.github.io/CP04-FrontEnd]
+
+---
+
 # 🌱 EcoTrend - E-commerce Sustentável — FrontEnd
 
 ## 📌 Descrição
@@ -107,26 +124,3 @@ README com descrição do projeto.
 
 Entrega em grupo de até 5 integrantes.
 
-
-
----
-
-## 👥 Integrantes
-
-| Nome            | RM       |
-|-----------------|----------|
-| André Mateus Yoshimori | RM563310 |
-| Eduardo Francisco Mauro Gonçalves | RM561969 |
-| Ever Callisaya Amaru | RM563971 |
-| Gabriel Luchetta dos Santos | RM561861 |
-| Matheus Henrique Ferreirra Camargo da Silva | RM566232 |
-
-
----
-
-## 🔗 Deploy (GitHub Pages): [link do projeto aqui]
-
-## 📹 Vídeo de Demonstração: [link do vídeo aqui]
-
-
----
