@@ -356,7 +356,7 @@ button{
 }
 
 .secao-promocoes .card{
-    height: 12vw;
+    height: auto;
 }
 
 .card-body{
@@ -440,6 +440,83 @@ footer a:hover {
     .card{
         width:40vw;
     }
+    .card img{
+        height: 25vw;
+    }
+    .card h5{
+        font-size: 3vw;
+    }
+    .card p{
+        font-size: 3vw;
+    }
+    .btn{
+        font-size: 3vw;
+        padding: 1vw;
+    }
+    h2{
+        font-size: 5vw;
+    }
+    header{
+        height: 10vw;
+        font-size: 3vw;
+    }
+    header #carrinho{
+        width: 4vw;
+        height: 4vw;
+    }
+    .carousel-inner img{
+        height: 120vw;
+    }
+    .carousel-item h5{
+        font-size: 10vw;
+    }
+    .carousel-item p{
+        font-size: 4vw;
+    }
+    .carousel-item button{
+        font-size: 5vw;
+    }
+    label.btn.btn-outline-primary {
+        font-size: 0;
+    }
+    label.btn.btn-outline-primary svg {
+        width: 7vw;
+        height: 10vw;
+    }
+    .secao-produtos{
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+    }
+    .btn-group:has(#btnradio1:checked) + .secao-produtos{
+        grid-template-areas:
+            "roupa1 roupa3"
+            "roupa2 roupa4";
+    }
+    .btn-group:has(#btnradio2:checked) + .secao-produtos{
+        grid-template-areas:
+            "beleza1 beleza3"
+            "beleza2 beleza4";
+    }
+    .btn-group:has(#btnradio3:checked) + .secao-produtos{
+        grid-template-areas:
+            "casa1 casa3"
+            "casa2 casa4";
+    }
+    .btn-group:has(#btnradio4:checked) + .secao-produtos{
+        grid-template-areas:
+            "tecnologia1 tecnologia3"
+            "tecnologia2 tecnologia4";
+    }
+    #produtos-section .card img{
+        height: 70vw;
+    }
+    .secao-promocoes{
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "cupom1 cupom3"
+            "cupom2 cupom4"
+    }
 }
 
 @media screen and (max-width: 500px){
@@ -457,6 +534,12 @@ footer a:hover {
     }
     .card img{
         height: 35vw;
+    }
+    .card h5{
+        font-size: 5vw;
+    }
+    .card p{
+        font-size: 4vw;
     }
     .btn{
         font-size: 5vw;
@@ -535,9 +618,6 @@ footer a:hover {
     }
     #produtos-section .card img{
         height: 70vw;
-    }
-    .secao-promocoes .card{
-        height: 80vw;
     }
     .secao-promocoes{
         grid-template-columns: auto;
