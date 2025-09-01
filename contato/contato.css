@@ -361,7 +361,6 @@
             text-align: center;
         }
 
-        /* Tablet styles */
         @media (max-width: 992px) {
             .content-grid {
                 grid-template-columns: 1fr;
@@ -378,7 +377,6 @@
             }
         }
 
-        /* Mobile styles */
         @media (max-width: 768px) {
             .main-container {
                 gap: 1rem;
@@ -458,7 +456,6 @@
             }
         }
 
-        /* Small mobile styles */
         @media (max-width: 480px) {
             .header h1 {
                 font-size: 1.6rem;
@@ -472,7 +469,7 @@
             
             .form-control {
                 padding: 0.875rem;
-                font-size: 16px; /* Previne zoom no iOS */
+                font-size: 16px; 
             }
             
             .btn-primary {
@@ -488,7 +485,6 @@
             }
         }
 
-        /* Touch device optimizations */
         @media (hover: none) and (pointer: coarse) {
             .btn-primary:hover {
                 transform: none;
