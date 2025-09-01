@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- EcoTrend - E-commerce Sustentável -->
+    <title>Categorias</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/categoria.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-leaf-fill"></i> EcoTrend
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav" >
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Página Inicial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Categorias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-outline-dark me-2">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <button class="btn btn-outline-dark me-2">
+                        <i class="bi bi-person-fill"></i>
+                    </button>
+                    <button class="btn btn-warning">
+                        <i class="bi bi-cart-fill me-1"></i>
+                        <span class="badge bg-danger">3</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <div class="container my-4">
+        <div class="row">
+            <!-- Filtros Laterais -->
+            <div class="col-lg-3 col-md-4 mb-4">
+                <div class="filter-section">
+                    <h5 class="filter-title">
+                        <i class="bi bi-funnel-fill me-2"></i>Filtros Ecológicos
+                    </h5>
+                    <div class="filter-content">
+                        <!-- Filtro por Preço -->
+                        <div class="filter-group">
+                            <h6><i class="bi bi-tag-fill"></i> Faixa de Preço</h6>
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <input type="number" class="form-control price-input" placeholder="Min" min="0">
+                                </div>
+                                <div class="col-6">
+                                    <input type="number" class="form-control price-input" placeholder="Max" min="0">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Filtro por Categoria -->
+                        <div class="filter-group">
+                            <h6><i class="bi bi-list-ul"></i> Categoria</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="roupas">
+                                <label class="form-check-label" for="roupas">
+                                    Roupas & Acessórios
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="beleza">
+                                <label class="form-check-label" for="beleza">
+                                    Produtos de Beleza
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="casa">
+                                <label class="form-check-label" for="casa">
+                                    Utensílios para Casa
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="tecnologia">
+                                <label class="form-check-label" for="tecnologia">
+                                    Tecnologia Verde
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="sustentavel">
+                                <label class="form-check-label" for="sustentavel">
+                                    Produtos Sustentáveis
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Filtro por Sustentabilidade -->
+                        <div class="filter-group">
+                            <h6><i class="bi bi-leaf-fill"></i> Certificação Eco</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="organico">
+                                <label class="form-check-label" for="organico">Orgânico</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="reciclado">
+                                <label class="form-check-label" for="reciclado">Reciclado</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="vegano">
+                                <label class="form-check-label" for="vegano">Vegano</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="biodegradavel">
+                                <label class="form-check-label" for="biodegradavel">Biodegradável</label>
+                            </div>
+                        </div>
+
+                        <!-- Botões de Ação -->
+                        <div class="d-grid gap-2">
+                            <button type="button" class="btn btn-success btn-filter">
+                                <i class="bi bi-search me-2"></i>Aplicar Filtros
+                            </button>
+                            <button type="button" class="btn btn-secondary btn-clear">
+                                <i class="bi bi-x-lg me-2"></i>Limpar Filtros
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Área de Produtos -->
+            <div class="col-lg-9 col-md-8">
+                <div class="products-section">
+                    <!-- Breadcrumb -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Início</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Produtos Sustentáveis</li>
+                        </ol>
+                    </nav>
+
+                    <!-- Título e Controles -->
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="section-title mb-0">
+                            <i class="bi bi-leaf me-2"></i>Produtos Ecológicos
+                        </h2>
+                        <select class="form-select">
+                            <option selected>Ordenar por</option>
+                            <option>Índice Ecológico</option>
+                            <option>Menor Preço</option>
+                            <option>Maior Preço</option>
+                            <option>Nome A-Z</option>
+                            <option>Mais Recentes</option>
+                        </select>
+
+                    </div>
+
+                    <div class="results-info">
+                        <i class="bi bi-info-circle me-1"></i>Mostrando 1-6 de 47 produtos sustentáveis
+                    </div>
+
+                    <!-- Grid de Produtos -->
+                    <div class="row g-3">
+                        <!-- Produto 1 -->
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="card product-card">
+                                <div class="eco-badge">
+                                    <i class="bi bi-leaf me-1"></i>ECO
+                                </div>
+                                <div class="product-image">
+                                    <img src="./imgs/camisetaAlgodao.png" class="card-img-top">
+                                </div>
+                                <div class="product-info">
+                                    <span class="category-badge">Roupas e Acessórios</span>
+                                    <h5 class="product-title">Camiseta de Algodão Orgânico</h5>
+                                    <div class="product-price">
+                                        <span class="old-price">R$ 89,00</span>
+                                        R$ 69,00
+                                    </div>
+                                    <button class="btn btn-primary btn-add-cart">
+                                        <i class="bi bi-plus-lg me-2"></i>Adicionar ao Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Produto 2 -->
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="card product-card">
+                                <div class="eco-badge">
+                                    <i class="bi bi-recycle me-1"></i>REC
+                                </div>
+                                <div class="product-image">
+                                    <img src="./imgs/jeansReciclado.png" style="transform: scale(0.1)" class="card-image-top">
+                                </div>
+                                <div class="product-info">
+                                    <span class="category-badge">Roupas e Acessórios</span>
+                                    <h5 class="product-title">Calça de Jeans Reciclado (Denim)</h5>
+                                    <div class="product-price">
+                                        R$ 159,00
+                                    </div>
+                                    <button class="btn btn-primary btn-add-cart">
+                                        <i class="bi bi-plus-lg me-2"></i>Adicionar ao Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Produto 3 -->
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="card product-card">
+                                <div class="eco-badge">
+                                    <i class="bi bi-recycle me-1"></i>PET
+                                </div>
+                                <div class="product-image">
+                                    <img src="./imgs/mochilaPet.png" class="card-image-top">
+                                </div>
+                                <div class="product-info">
+                                    <span class="category-badge">Utensílios para Casa</span>
+                                    <h5 class="product-title">Mochila de PET Reciclado</h5>
+                                    <div class="product-price">
+                                        <span class="old-price">R$ 199,00</span>
+                                        R$ 149,00
+                                    </div>
+                                    <button class="btn btn-primary btn-add-cart">
+                                        <i class="bi bi-plus-lg me-2"></i>Adicionar ao Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Produto 4 -->
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="card product-card">
+                                <div class="eco-badge">
+                                    <i class="bi bi-recycle me-1"></i>REC
+                                </div>
+                                <div class="product-image">
+                                    <img src="./imgs/tenisBorracha.png" style="transform: scale(1.4);"class="card-img-top">
+                                </div>
+                                <div class="product-info">
+                                    <span class="category-badge">Tecnologia Verde</span>
+                                    <h5 class="product-title">Tênis de Borracha Reciclada</h5>
+                                    <div class="product-price">
+                                        R$ 289,00
+                                    </div>
+                                    <button class="btn btn-primary btn-add-cart">
+                                        <i class="bi bi-plus-lg me-2"></i>Adicionar ao Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Produto 5 -->
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="card product-card">
+                                <div class="eco-badge">
+                                    <i class="bi bi-leaf me-1"></i>BIO
+                                </div>
+                                <div class="product-image">
+                                    <img src="./imgs/maquiagemEco.png" style="transform: scale(1.5);" class="card-img-top">
+                                </div>
+                                <div class="product-info">
+                                    <span class="category-badge">Produtos de Beleza</span>
+                                    <h5 class="product-title">Kit Cosméticos Naturais Veganos</h5>
+                                    <div class="product-price">
+                                        <span class="old-price">R$ 149,00</span>
+                                        R$ 119,00
+                                    </div>
+                                    <button class="btn btn-primary btn-add-cart">
+                                        <i class="bi bi-plus-lg me-2"></i>Adicionar ao Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Produto 6 -->
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="card product-card">
+                                <div class="eco-badge">
+                                    <i class="fas fa-solar-panel me-1"></i>SOL
+                                </div>
+                                <div class="product-image">
+                                    <img src="./imgs/carregadorEco.png" style="transform: scale(1.2);" class="card-img-top">
+                                </div>
+                                <div class="product-info">
+                                    <span class="category-badge">Tecnologia Verde</span>
+                                    <h5 class="product-title">Carregador Solar Portátil Eco</h5>
+                                    <div class="product-price">
+                                        R$ 199,00
+                                    </div>
+                                    <button class="btn btn-primary btn-add-cart">
+                                        <i class="bi bi-plus-lg me-2"></i>Adicionar ao Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Paginação -->
+                <div class="d-flex justify-content-center mt-4">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid">
+        <div>
+            <h3>EcoTrend</h3>
+            <p>Um e-commerce especializado em produtos sustentáveis e ecológicos, focado em promover um estilo de vida mais consciente e sustentável.</p>
+        </div>
+        <div>
+            <h4>Links Rápidos</h4>
+            <ul>
+                <li><a href="#contato">Página Inicial</a></li>
+                <li><a href="#categorias">Categorias</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+        <div id="contato">
+            <h4>Contato</h4>
+            <p>Email: ecotrend@company.com</p>
+            <p>Telefone: +55 11 99999-9999</p>
+            <p>Endereço: Rua Sustentável, 123 - São Paulo, SP
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
