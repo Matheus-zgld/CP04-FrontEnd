@@ -6,7 +6,7 @@
 | Eduardo Francisco Mauro Gonçalves | RM561969 |
 | Ever Callisaya Amaru | RM563971 |
 | Gabriel Luchetta dos Santos | RM561861 |
-| Matheus Henrique Ferreirra Camargo da Silva | RM566232 |
+| Matheus Henrique Ferreira Camargo da Silva | RM566232 |
 
 
 ---
